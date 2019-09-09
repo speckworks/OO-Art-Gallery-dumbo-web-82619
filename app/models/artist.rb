@@ -24,7 +24,7 @@ class Artist
   end
   
   def self.total_experience
-    self.all.years_experience.reduce(0) {|sum, artist|
+    self.all.reduce(0) {|sum, artist|
       sum + artist.years_experience}
   end
 end
