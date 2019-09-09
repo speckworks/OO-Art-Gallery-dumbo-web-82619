@@ -24,6 +24,7 @@ class Artist
   end
   
   def self.total_experience
-    Artist.years_experience.map {|years_experience| Artist.years_experience.reduce(:+)}
+    Artist.years_experience.map {|sum, artist|
+      sum + artist.years_experience}
   end
 end
